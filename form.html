@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Professional Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #e9f1f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 60px auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #34495e;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #ccd6dd;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 16px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    input[type="text"]:focus,
+    textarea:focus {
+      border-color: #3498db;
+      outline: none;
+      box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .radio-group {
+      margin-top: 10px;
+      color: #2c3e50;
+    }
+
+    .radio-group input {
+      margin-right: 8px;
+    }
+
+    .submit-btn {
+      margin-top: 30px;
+      width: 100%;
+      padding: 14px;
+      background-color: #2980b9;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .submit-btn:hover {
+      background-color: #1c5980;
+    }
+
+    .error {
+      color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Submit Your Details</h2>
+    <form method="post" action="submit.php">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="email">E-mail:</label>
+      <input type="text" name="email" id="email" required>
+
+      <label for="website">Website:</label>
+      <input type="text" name="website" id="website">
+
+      <label for="comment">Comment:</label>
+      <textarea name="comment" id="comment" rows="5"></textarea>
+
+      <label>Gender:</label>
+      <div class="radio-group">
+        <input type="radio" name="gender" value="female" required>Female
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="other">Other
+      </div>
+
+      <input type="submit" name="submit" value="Submit" class="submit-btn">
+    </form>
+  </div>
+
+</body>
+</html>
